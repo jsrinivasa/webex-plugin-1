@@ -293,7 +293,7 @@ if (meeting) {
     console.log('about to start');
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://127.0.0.1:5000/proc", true);
+    xhr.open("POST", "https://127.0.0.1:5000/proc", true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({
         value: payload 
