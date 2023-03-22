@@ -20,7 +20,7 @@ def create_app(transcripts, curr_state, openai_key, lst):
 
 
     # To read the live transcript result from LISTENER and store into variable "transcripts" 
-    @app.route('/proc', methods=['GET', 'POST'])
+    @app.route('/proc/', methods=['GET', 'POST'])
     def proc():
         nonlocal transcripts 
         nonlocal curr_state 
@@ -44,7 +44,7 @@ def create_app(transcripts, curr_state, openai_key, lst):
     
 
     # To send processed results to the SENDER interface (to be displayed on plugin)
-    @app.route('/read', methods=['GET'])
+    @app.route('/read/', methods=['GET'])
     def read(): 
         nonlocal curr_state 
         print(f"Curr_st {curr_state}")
@@ -53,7 +53,7 @@ def create_app(transcripts, curr_state, openai_key, lst):
 
 
     # To <>TBD> 
-    @app.route('/send', methods=['POST'])
+    @app.route('/send/', methods=['POST'])
     def send(): 
         nonlocal curr_state 
         nonlocal openai_key 
