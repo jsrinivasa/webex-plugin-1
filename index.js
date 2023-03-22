@@ -1,7 +1,7 @@
 // Create a new Webex app instance
 var app = new window.Webex.Application();
-var REST_API_READ_CONTAINERS = 'https://127.0.0.1:5000/read'
-var REST_API_SEND_KEYS_IDS = 'https://127.0.0.1:5000/send'
+var REST_API_READ_CONTAINERS = 'http://127.0.0.1:5000/read'
+var REST_API_SEND_KEYS_IDS = 'http://127.0.0.1:5000/send'
 var flag = false; 
 var update_interval = 5000; // in ms 
 
@@ -293,7 +293,7 @@ if (meeting) {
     console.log('about to start');
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://127.0.0.1:5000/proc", true);
+    xhr.open("POST", "http://127.0.0.1:5000/proc", true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({
         value: payload 
