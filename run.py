@@ -4,7 +4,7 @@ from flask_cors import CORS
 import os 
 import time 
 
-PORT = "http://127.0.0.1:5000/"
+PORT = "https://127.0.0.1:5000/"
 
 
 if __name__ == "__main__": 

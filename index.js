@@ -46,6 +46,8 @@ function submitForm() {
 
     fetch(REST_API_SEND_KEYS_IDS, {
         method: "POST",
+        mode: 'cors',
+        credentials: 'include', // Required when using cookies or other credentials across origins
         headers: {
         "Content-Type": "application/json"
         },
@@ -63,6 +65,9 @@ function submitForm() {
         document.getElementById("openai-key").value = "Successfully received."; 
 
         return response.json();
+        })
+    .then(data => {
+        console.log('Success:', data);
         })
     .catch(error => {
         console.error("There was a problem with the send operation:", error);
